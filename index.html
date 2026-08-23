@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HydroClean — Testimoni Keluarga </title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300..700;1,9..40,300..700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#00AED0;
+    --blue-light:#5FCBE8;
+    --blue-tint:#D4F0F7;
+    --white:#FFFFFF;
+    --gray:#F2F4F6;
+    --ink:#1F2A30;
+    --ink-soft:#5A6870;
+    /* google native */
+    --g-star:#FBBC04;
+    --g-text:#202124;
+    --g-sub:#70757A;
+    --g-border:#DADCE0;
+    /* ig native */
+    --ig-bg:#000;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"DM Sans",sans-serif;background:var(--white);color:var(--ink);
+    line-height:1.7;font-weight:300;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1200px;margin:0 auto;padding:0 7vw}
+  @media(min-width:1300px){.wrap{padding:0 48px}}
+  .eyebrow{font-size:11px;letter-spacing:4px;text-transform:uppercase;font-weight:500;color:var(--ink-soft)}
+  .eyebrow .dot{color:var(--blue)}
+  h1{font-weight:300;font-size:clamp(38px,5.2vw,64px);line-height:1.18;letter-spacing:-0.01em;margin:28px 0 24px}
+  h1 em{font-style:normal;color:var(--blue)}
+  h2{font-weight:300;font-size:clamp(28px,3.4vw,42px);line-height:1.25;margin:24px 0 16px}
+  .lede{font-size:18px;font-weight:300;color:var(--ink-soft);max-width:560px}
+
+  nav{padding:34px 0;display:flex;justify-content:space-between;align-items:center}
+  .wordmark{font-weight:500;font-size:19px;color:var(--ink);text-decoration:none;line-height:1.05}
+  .wordmark span{color:var(--blue)}
+  .nav-cta{font-size:14px;font-weight:500;color:var(--ink);text-decoration:none;padding:11px 22px;border:1px solid var(--ink);border-radius:100px;transition:all .25s ease}
+  .nav-cta:hover{background:var(--ink);color:var(--white)}
+
+  .hero{padding:11vh 0 12vh}
+  .hero .lede{margin-bottom:40px}
+  .hero-cta{display:inline-block;font-size:15px;font-weight:500;color:var(--white);background:var(--blue);text-decoration:none;padding:15px 32px;border-radius:100px;transition:opacity .25s ease}
+  .hero-cta:hover{opacity:.85}
+  .hero-note{display:block;margin-top:18px;font-size:13px;color:var(--ink-soft)}
+
+  .proof-band{background:var(--blue-tint);padding:64px 0}
+  .proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;text-align:center}
+  .proof-num{font-size:clamp(36px,4.5vw,56px);font-weight:300;line-height:1.1}
+  .proof-num strong{font-weight:500;color:var(--blue)}
+  .proof-label{font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:500;color:var(--ink-soft);margin-top:10px}
+  @media(max-width:720px){.proof-grid{grid-template-columns:1fr;gap:32px}}
+
+  section.block{padding:13vh 0}
+  .sec-head{max-width:640px;margin-bottom:56px}
+
+  /* ============================================================
+     GOOGLE MAPS NATIVE PANEL
+     ============================================================ */
+  .gmaps-panel{
+    font-family:Roboto,Arial,sans-serif;
+    max-width:840px;
+    border:1px solid var(--g-border);border-radius:12px;
+    background:#fff;overflow:hidden;
+    box-shadow:0 1px 3px rgba(60,64,67,.08);
+  }
+  .gm-head{padding:22px 24px 18px;border-bottom:1px solid #E8EAED}
+  .gm-title{font-size:18px;font-weight:500;color:var(--g-text);display:flex;align-items:center;gap:10px}
+  .gm-glogo{width:20px;height:20px;flex-shrink:0}
+  .gm-summary{display:flex;align-items:center;gap:26px;margin-top:16px}
+  .gm-big{font-size:44px;color:var(--g-text);font-weight:400;line-height:1}
+  .gm-sum-right{display:flex;flex-direction:column;gap:4px}
+  .gm-stars{display:inline-flex;gap:1px}
+  .gm-star{width:15px;height:15px;fill:var(--g-star)}
+  .gm-count{font-size:13px;color:var(--g-sub)}
+  .gm-bars{flex:1;max-width:230px;display:none}
+  @media(min-width:640px){.gm-bars{display:block}}
+  .gm-bar-row{display:flex;align-items:center;gap:8px;font-size:11px;color:var(--g-sub);margin:2px 0}
+  .gm-bar{flex:1;height:8px;background:#E8EAED;border-radius:4px;overflow:hidden}
+  .gm-bar i{display:block;height:100%;background:var(--g-star);border-radius:4px}
+
+  .gm-list{max-height:640px;overflow-y:auto}
+  .gm-review{padding:20px 24px;border-bottom:1px solid #E8EAED}
+  .gm-review:last-child{border-bottom:none}
+  .gm-r-head{display:flex;align-items:center;gap:12px}
+  .gm-avatar{width:40px;height:40px;border-radius:50%;color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:500;flex-shrink:0}
+  .gm-r-name{font-size:14px;color:var(--g-text);font-weight:500;line-height:1.3}
+  .gm-r-sub{font-size:12px;color:var(--g-sub)}
+  .gm-r-stars{display:flex;align-items:center;gap:8px;margin:10px 0 6px}
+  .gm-r-when{font-size:12px;color:var(--g-sub)}
+  .gm-r-text{font-size:14px;color:var(--g-text);line-height:1.6}
+  .gm-r-actions{display:flex;gap:22px;margin-top:12px}
+  .gm-r-actions span{font-size:12px;color:var(--g-sub);display:inline-flex;align-items:center;gap:6px;cursor:default}
+  .gm-r-actions svg{width:14px;height:14px;fill:var(--g-sub)}
+  .gm-foot{padding:14px 24px;background:#F8F9FA;font-size:12px;color:var(--g-sub);font-family:Roboto,Arial,sans-serif;display:flex;align-items:center;gap:8px}
+  .gm-foot img{height:16px}
+
+  /* ============================================================
+     INSTAGRAM NATIVE PROFILE + REELS GRID
+     ============================================================ */
+  .ig-shell{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    max-width:935px;border:1px solid #DBDBDB;border-radius:12px;background:#fff;overflow:hidden;
+  }
+  .ig-prof{display:flex;align-items:center;gap:28px;padding:28px 30px 22px}
+  .ig-avatar-ring{width:86px;height:86px;border-radius:50%;padding:3px;background:conic-gradient(#F9CE34,#EE2A7B,#6228D7,#F9CE34);flex-shrink:0}
+  .ig-avatar{width:100%;height:100%;border-radius:50%;background:#fff;padding:3px}
+  .ig-avatar-inner{width:100%;height:100%;border-radius:50%;background:var(--white);display:flex;align-items:center;justify-content:center;overflow:hidden;border:1px solid #EFEFEF}
+  .ig-avatar-inner span{font-family:"DM Sans",sans-serif;font-weight:500;font-size:15px;line-height:1;color:var(--ink);text-align:center}
+  .ig-avatar-inner span b{color:var(--blue);font-weight:500;display:block}
+  .ig-prof-info{flex:1;min-width:0}
+  .ig-username{font-size:19px;font-weight:400;color:#262626;display:flex;align-items:center;gap:7px}
+  .ig-verified{width:16px;height:16px;flex-shrink:0}
+  .ig-stats{display:flex;gap:28px;margin-top:12px;font-size:14.5px;color:#262626}
+  .ig-stats b{font-weight:600}
+  .ig-bio{font-size:13.5px;color:#262626;margin-top:10px;line-height:1.5}
+  .ig-follow-btn{
+    font-size:13.5px;font-weight:600;color:#fff;background:#0095F6;border:none;border-radius:8px;
+    padding:8px 22px;cursor:pointer;flex-shrink:0;text-decoration:none;
+  }
+  .ig-tabs{display:flex;justify-content:center;gap:56px;border-top:1px solid #DBDBDB;font-size:11px;letter-spacing:1px;font-weight:600;color:#8E8E8E;text-transform:uppercase}
+  .ig-tab{padding:14px 0;display:flex;align-items:center;gap:7px}
+  .ig-tab svg{width:13px;height:13px}
+  .ig-tab.active{color:#262626;border-top:1px solid #262626;margin-top:-1px}
+
+  .ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;background:#fff}
+  .ig-cell{position:relative;aspect-ratio:9/13;overflow:hidden;background:#111;cursor:pointer}
+  .ig-cell img{width:100%;height:100%;object-fit:cover;display:block;transition:opacity .2s}
+  .ig-cell .reel-badge{position:absolute;top:10px;right:10px;width:18px;height:18px;filter:drop-shadow(0 1px 2px rgba(0,0,0,.5))}
+  .ig-cell .views{
+    position:absolute;left:10px;bottom:10px;color:#fff;font-size:13px;font-weight:600;
+    display:flex;align-items:center;gap:5px;text-shadow:0 1px 3px rgba(0,0,0,.6);
+  }
+  .ig-cell .views svg{width:14px;height:14px;fill:#fff;filter:drop-shadow(0 1px 2px rgba(0,0,0,.5))}
+  .ig-cell .hover-stats{
+    position:absolute;inset:0;background:rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center;gap:26px;
+    color:#fff;font-size:14.5px;font-weight:700;opacity:0;transition:opacity .2s;
+  }
+  .ig-cell:hover .hover-stats{opacity:1}
+  .hover-stats span{display:inline-flex;align-items:center;gap:7px}
+  .hover-stats svg{width:18px;height:18px;fill:#fff}
+  .ig-cell .handle-strip{
+    position:absolute;left:0;right:0;bottom:0;padding:26px 10px 8px;
+    background:linear-gradient(transparent, rgba(0,0,0,.65));
+    color:#fff;font-size:12px;font-weight:600;text-shadow:0 1px 2px rgba(0,0,0,.4);
+    display:flex;align-items:center;gap:6px;pointer-events:none;
+  }
+  .handle-strip .mini-av{width:18px;height:18px;border-radius:50%;background:#fff;color:#262626;font-size:9px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+
+  /* closing */
+  .closing{text-align:center;padding:16vh 0}
+  .closing h2{font-size:clamp(32px,4.2vw,52px)}
+  .closing .lede{margin:0 auto 44px}
+  footer{border-top:1px solid #E4E9EC;padding:38px 0;font-size:12.5px;color:var(--ink-soft)}
+  footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav>
+    <a class="wordmark" href="#">hydro<br><span>clean</span></a>
+    <a class="nav-cta" href="#google">Baca testimoni</a>
+  </nav>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Testimoni keluarga <span class="dot">·</span> HydroClean Indonesia</p>
+    <h1>Dulu mereka juga<br>tidak yakin kasurnya bersih.<br><em>Lalu mereka lihat airnya.</em></h1>
+    <p class="lede">3.426 keluarga menulis pengalaman mereka di Google dan Instagram.
+    Bukan kata kami — kata mereka. Silakan baca sendiri.</p>
+    <a class="hero-cta" href="#google">Lihat apa kata mereka</a>
+    <span class="hero-note">Semua testimoni di halaman ini nyata, tercatat publik di Google Review dan Instagram.</span>
+  </div>
+</header>
+
+<div class="proof-band">
+  <div class="wrap proof-grid">
+    <div><div class="proof-num"><strong>4,9</strong> / 5</div><div class="proof-label">Rating Google</div></div>
+    <div><div class="proof-num"><strong>3.426</strong></div><div class="proof-label">Ulasan tercatat</div></div>
+    <div><div class="proof-num"><strong>241 rb</strong></div><div class="proof-label">Pengikut Instagram</div></div>
+  </div>
+</div>
+
+<!-- GOOGLE MAPS NATIVE-STYLE PANEL -->
+<section class="block" id="google">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Google Review <span class="dot">·</span> HydroClean Indonesia</p>
+      <h2>Seperti yang tercatat di Google.</h2>
+      <p class="lede">Ditulis pelanggan setelah petugas kami pulang — apa adanya.</p>
+    </div>
+
+    <div class="gmaps-panel">
+      <div class="gm-head">
+        <div class="gm-title">
+          <svg class="gm-glogo" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+          HydroClean Indonesia
+        </div>
+        <div class="gm-summary">
+          <div class="gm-big">4,9</div>
+          <div class="gm-sum-right">
+            <span class="gm-stars" id="sum-stars"></span>
+            <span class="gm-count">3.426 ulasan</span>
+          </div>
+          <div class="gm-bars">
+            <div class="gm-bar-row">5 <div class="gm-bar"><i style="width:93%"></i></div></div>
+            <div class="gm-bar-row">4 <div class="gm-bar"><i style="width:5%"></i></div></div>
+            <div class="gm-bar-row">3 <div class="gm-bar"><i style="width:1%"></i></div></div>
+            <div class="gm-bar-row">2 <div class="gm-bar"><i style="width:0.5%"></i></div></div>
+            <div class="gm-bar-row">1 <div class="gm-bar"><i style="width:0.5%"></i></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="gm-list" id="gm-list"><!-- diisi JS --></div>
+      <div class="gm-foot">Ulasan dari Google Maps · HydroClean Indonesia, Jakarta Selatan</div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM NATIVE-STYLE REELS GRID -->
+<section class="block" id="instagram" style="padding-top:2vh">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Instagram <span class="dot">·</span> @hydroclean.id</p>
+      <h2>Cerita yang mereka rekam sendiri.</h2>
+      <p class="lede">Reels dari keluarga yang sudah merasakan bedanya — di-repost dari akun mereka.</p>
+    </div>
+
+    <div class="ig-shell">
+      <div class="ig-prof">
+        <div class="ig-avatar-ring"><div class="ig-avatar"><div class="ig-avatar-inner">
+          <span>hydr<b>clean</b></span>
+        </div></div></div>
+        <div class="ig-prof-info">
+          <div class="ig-username">hydroclean.id
+            <svg class="ig-verified" viewBox="0 0 40 40"><path fill="#0095F6" d="M19.998 3.094 14.638 0l-2.972 5.15H5.432v6.354L0 14.64 3.094 20 0 25.359l5.432 3.137v6.354h6.234L14.638 40l5.36-3.094L25.358 40l2.972-5.15h6.234v-6.354L40 25.359 36.905 20 40 14.64l-5.436-3.137V5.15h-6.234L25.358 0z"/><path fill="#fff" d="m28.706 14.618-1.665-1.664-9.878 9.878-4.276-4.276-1.664 1.665 5.94 5.94z"/></svg>
+          </div>
+          <div class="ig-stats"><span><b>2.056</b> posts</span><span><b>241 rb</b> followers</span><span><b>1</b> following</span></div>
+          <div class="ig-bio">Helping families create healthier homes.<br>Fewer allergens. Deeper sleep. Rest, assured.</div>
+        </div>
+        <a class="ig-follow-btn" href="https://www.instagram.com/hydroclean.id/" target="_blank" rel="noopener">Follow</a>
+      </div>
+      <div class="ig-tabs">
+        <div class="ig-tab"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z"/></svg> Posts</div>
+        <div class="ig-tab active"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12.823 1 2.974 5.002h-5.58L7.243 1zm4.06 5.002h5.036L18.945 1h-4.716zM2.081 6.002h5.012L10.067 1H4.276C3.041 1 2.081 2.983 2.081 4.223zm.001 1.5V19.78A3.222 3.222 0 0 0 5.3 23h13.4a3.222 3.222 0 0 0 3.219-3.22V7.502zm12.545 8.436-4.972 2.87a.563.563 0 0 1-.844-.487v-5.74a.563.563 0 0 1 .844-.488l4.972 2.87a.563.563 0 0 1 0 .975"/></svg> Reels</div>
+        <div class="ig-tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13.7 5.3 8.2 10.8a2.5 2.5 0 0 0 0 3.5l1.5 1.5a2.5 2.5 0 0 0 3.5 0l5.5-5.5"/><circle cx="18.5" cy="5.5" r="3"/></svg> Tagged</div>
+      </div>
+      <div class="ig-grid" id="ig-grid"><!-- diisi JS --></div>
+    </div>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="wrap">
+    <p class="eyebrow">HydroClean <span class="dot">·</span> Healthy Home</p>
+    <h2>Giliran keluarga Anda.</h2>
+    <p class="lede">Satu kunjungan. Anda akan melihat sendiri apa yang selama ini ikut tidur di kasur — dan apa rasanya setelah semuanya diangkat.</p>
+    <a class="hero-cta" href="https://linktr.ee/hydroclean.id" target="_blank" rel="noopener">Jadwalkan kunjungan</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>hydroclean · Healthy Home Indonesia</div>
+    <div>Testimoni bersumber dari Google Review &amp; Instagram @hydroclean.id · Rating per Agustus 2026</div>
+  </div>
+</footer>
+
+<script>
+const STAR = '<svg class="gm-star" viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>';
+const AV_COLORS = ["#7B1FA2","#00796B","#C2185B","#5D4037","#455A64","#E64A19","#512DA8","#00838F","#AD1457","#2E7D32"];
+const REEL_ICON = '<svg class="reel-badge" viewBox="0 0 24 24" fill="#fff"><path d="m12.823 1 2.974 5.002h-5.58L7.243 1zm4.06 5.002h5.036L18.945 1h-4.716zM2.081 6.002h5.012L10.067 1H4.276C3.041 1 2.081 2.983 2.081 4.223zm.001 1.5V19.78A3.222 3.222 0 0 0 5.3 23h13.4a3.222 3.222 0 0 0 3.219-3.22V7.502zm12.545 8.436-4.972 2.87a.563.563 0 0 1-.844-.487v-5.74a.563.563 0 0 1 .844-.488l4.972 2.87a.563.563 0 0 1 0 .975"/></svg>';
+const HEART = '<svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54z"/></svg>';
+const COMMENT = '<svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>';
+
+document.getElementById('sum-stars').innerHTML = STAR.repeat(5);
+
+fetch('data/google.json').then(r=>r.json()).then(d => {
+  const gmList = document.getElementById('gm-list');
+  d.reviews.forEach((r,i) => {
+    const initial = r.name.trim()[0].toUpperCase();
+    const el = document.createElement('div');
+    el.className = 'gm-review';
+    el.innerHTML = `
+      <div class="gm-r-head">
+        <div class="gm-avatar" style="background:${AV_COLORS[i % AV_COLORS.length]}">${initial}</div>
+        <div><div class="gm-r-name">${r.name}</div><div class="gm-r-sub">${r.sub||''}</div></div>
+      </div>
+      <div class="gm-r-stars"><span class="gm-stars">${STAR.repeat(5)}</span><span class="gm-r-when">${r.when}</span></div>
+      <div class="gm-r-text">${r.text}</div>`;
+    gmList.appendChild(el);
+  });
+});
+
+fetch('data/reels.json').then(r=>r.json()).then(d => {
+  const igGrid = document.getElementById('ig-grid');
+  d.reels.forEach(r => {
+    const initial = r.handle[0].toUpperCase();
+    const el = document.createElement('a');
+    el.className = 'ig-cell';
+    el.href = r.href || `https://www.instagram.com/${r.handle}/`;
+    el.target = '_blank'; el.rel = 'noopener';
+    const likes = r.likes ? `<div class="views">${HEART.replace('<svg','<svg fill="#fff"')} ${r.likes}</div>` : '';
+    const hover = r.likes ? `<div class="hover-stats"><span>${HEART} ${r.likes}</span><span>${COMMENT} ${r.comments||0}</span></div>` : '';
+    el.innerHTML = `
+      <img src="${r.thumb}" alt="Reel testimoni dari @${r.handle}">
+      ${REEL_ICON}
+      ${likes}
+      <div class="handle-strip"><span class="mini-av">${initial}</span> @${r.handle}</div>
+      ${hover}`;
+    igGrid.appendChild(el);
+  });
+});
+</script>
+</body>
+</html>
