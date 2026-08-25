@@ -149,6 +149,17 @@ def main():
             "when": r.get("when") or "",
             "text": re.sub(r"\s+", " ", r["text"]).strip(), "stars": 5,
         })
+    def _age(w):
+        w = (w or "").lower()
+        m = re.search(r"(\d+)", w)
+        n = int(m.group(1)) if m else 1
+        if "tahun" in w: return n * 365
+        if "bulan" in w: return n * 30
+        if "minggu" in w: return n * 7
+        if "hari" in w: return n
+        if "jam" in w or "menit" in w: return 0
+        return 999
+    reviews.sort(key=lambda r: _age(r.get("when")))
     reviews = reviews[:30]
     head = dump.get("google_head") or {}
     rating = (head.get("rating") or "4,9").replace(".", ",")
@@ -192,12 +203,7 @@ def main():
         reels.append({"handle": handle, "href": "https://www.instagram.com" + href,
                       "thumb": thumb_rel, "likes": likes, "comments": comments, "caption": caption})
 
-    def lk(r):
-        try:
-            return int((r["likes"] or "0").replace(",", ""))
-        except Exception:
-            return 0
-    reels.sort(key=lk, reverse=True)
+    # urutan dipertahankan sesuai tab Reposts (terbaru lebih dulu)
     new_reels = {"followers": old_r.get("followers", "241 rb"), "posts": old_r.get("posts", "2.056"), "reels": reels}
     ig_meta = dump.get("ig_meta") or ""
     mm = re.search(r"([\d,.]+[KMrb\s]*?)\s*Followers", ig_meta, re.I)
