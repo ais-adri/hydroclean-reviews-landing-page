@@ -52,11 +52,20 @@
   .hero-note{display:block;margin-top:18px;font-size:13px;color:var(--ink-soft)}
 
   .proof-band{background:var(--blue-tint);padding:64px 0}
-  .proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;text-align:center}
+  .proof-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;text-align:center}
   .proof-num{font-size:clamp(36px,4.5vw,56px);font-weight:300;line-height:1.1}
   .proof-num strong{font-weight:500;color:var(--blue)}
   .proof-label{font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:500;color:var(--ink-soft);margin-top:10px}
   @media(max-width:720px){.proof-grid{grid-template-columns:1fr;gap:32px}}
+
+  /* cities — editorial, type-led */
+  .cities{padding:13vh 0;border-top:1px solid #EAEEF0}
+  .cities .wrap{display:grid;grid-template-columns:auto minmax(0,1fr);gap:7vw;align-items:baseline}
+  .cities-num{font-size:clamp(72px,11vw,150px);font-weight:300;line-height:.9;color:var(--blue);letter-spacing:-0.02em}
+  .cities-num small{display:block;font-size:12px;letter-spacing:4px;text-transform:uppercase;font-weight:500;color:var(--ink-soft);margin-top:16px}
+  .city-flow{font-size:clamp(19px,2.2vw,26px);font-weight:300;line-height:1.85;color:var(--ink);max-width:21em;min-width:0}
+  .city-flow i{font-style:normal;color:var(--blue);padding:0 .35em;font-weight:400}
+  @media(max-width:720px){.cities .wrap{grid-template-columns:1fr;gap:40px}}
 
   section.block{padding:13vh 0}
   .sec-head{max-width:640px;margin-bottom:56px}
@@ -173,17 +182,16 @@
 
 <header class="hero">
   <div class="wrap">
-    <p class="eyebrow">Testimoni keluarga <span class="dot">·</span> HydroClean Indonesia</p>
-    <h1>Dulu mereka juga<br>tidak yakin kasurnya bersih.<br><em>Lalu mereka lihat airnya.</em></h1>
-    <p class="lede">3.426 keluarga menulis pengalaman mereka di Google dan Instagram.
-    Bukan kata kami — kata mereka. Silakan baca sendiri.</p>
+    <h1>Puluhan ribu keluarga<br>sudah istirahat <em>lebih nyaman.</em></h1>
+    <p class="lede">Bukan self-claim. Ini adalah kompilasi review pelanggan kami yang sudah
+    melihat dan merasakan sendiri. Saatnya Anda yang jadi bagian dari mereka.</p>
     <a class="hero-cta" href="#google">Lihat apa kata mereka</a>
-    <span class="hero-note">Semua testimoni di halaman ini nyata, tercatat publik di Google Review dan Instagram.</span>
   </div>
 </header>
 
 <div class="proof-band">
   <div class="wrap proof-grid">
+    <div><div class="proof-num"><strong>150k+</strong></div><div class="proof-label">Keluarga</div></div>
     <div><div class="proof-num"><strong>4,9</strong> / 5</div><div class="proof-label">Rating Google</div></div>
     <div><div class="proof-num"><strong>3.426</strong></div><div class="proof-label">Ulasan tercatat</div></div>
     <div><div class="proof-num"><strong>241 rb</strong></div><div class="proof-label">Pengikut Instagram</div></div>
@@ -259,11 +267,19 @@
   </div>
 </section>
 
+<!-- 11 KOTA -->
+<section class="cities">
+  <div class="wrap">
+    <div class="cities-num">11<small>Kota</small></div>
+    <p class="city-flow">Jakarta<i>·</i>Bogor<i>·</i>Depok<i>·</i>Tangerang<i>·</i>Bekasi<i>·</i>Cikarang<i>·</i>Karawang<i>·</i>Bandung<i>·</i>Surabaya<i>·</i>Bali<i>·</i>Medan</p>
+  </div>
+</section>
+
 <section class="closing">
   <div class="wrap">
     <p class="eyebrow">HydroClean <span class="dot">·</span> Healthy Home</p>
-    <h2>Giliran keluarga Anda.</h2>
-    <p class="lede">Satu kunjungan. Anda akan melihat sendiri apa yang selama ini ikut tidur di kasur — dan apa rasanya setelah semuanya diangkat.</p>
+    <h2>Siap tidur lebih nyenyak?</h2>
+    <p class="lede">Mulai langkah perawatan rutin soft furniture dari tungau dan debu bersama HydroClean.</p>
     <a class="hero-cta" href="https://linktr.ee/hydroclean.id" target="_blank" rel="noopener">Jadwalkan kunjungan</a>
   </div>
 </section>
@@ -271,7 +287,6 @@
 <footer>
   <div class="wrap">
     <div>hydroclean · Healthy Home Indonesia</div>
-    <div>Testimoni bersumber dari Google Review &amp; Instagram @hydroclean.id · Rating per Agustus 2026</div>
   </div>
 </footer>
 
