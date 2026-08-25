@@ -58,14 +58,25 @@
   .proof-label{font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:500;color:var(--ink-soft);margin-top:10px}
   @media(max-width:720px){.proof-grid{grid-template-columns:1fr;gap:32px}}
 
-  /* cities — editorial, type-led */
-  .cities{padding:13vh 0;border-top:1px solid #EAEEF0}
-  .cities .wrap{display:grid;grid-template-columns:auto minmax(0,1fr);gap:7vw;align-items:baseline}
-  .cities-num{font-size:clamp(72px,11vw,150px);font-weight:300;line-height:.9;color:var(--blue);letter-spacing:-0.02em}
-  .cities-num small{display:block;font-size:12px;letter-spacing:4px;text-transform:uppercase;font-weight:500;color:var(--ink-soft);margin-top:16px}
-  .city-flow{font-size:clamp(19px,2.2vw,26px);font-weight:300;line-height:1.85;color:var(--ink);max-width:21em;min-width:0}
-  .city-flow i{font-style:normal;color:var(--blue);padding:0 .35em;font-weight:400}
-  @media(max-width:720px){.cities .wrap{grid-template-columns:1fr;gap:40px}}
+  /* cities — editorial ledger di panel biru */
+  .cities{padding:12vh 0}
+  .cities-panel{
+    background:var(--blue);border-radius:28px;color:#fff;
+    padding:clamp(40px,6vw,72px);position:relative;overflow:hidden;
+    display:grid;grid-template-columns:minmax(240px,auto) 1fr;gap:clamp(40px,6vw,90px);
+  }
+  .cities-smile{position:absolute;right:-90px;bottom:-130px;width:400px;height:400px;opacity:.13;pointer-events:none}
+  .cities-panel .eyebrow{color:rgba(255,255,255,.75);margin-bottom:24px}
+  .cities-panel .eyebrow .dot{color:#fff}
+  .cities-big{font-size:clamp(30px,3.6vw,44px);font-weight:300;line-height:1.25;max-width:9em;color:#fff}
+  .cities-big em{font-style:normal;font-weight:500}
+  .city-ledger{columns:2;column-gap:clamp(32px,4vw,64px);position:relative}
+  .city-row{
+    break-inside:avoid;display:flex;justify-content:space-between;align-items:baseline;
+    padding:15px 2px;border-bottom:1px solid rgba(255,255,255,.28);font-size:18px;font-weight:400;color:#fff;
+  }
+  .city-row small{font-size:11.5px;color:rgba(255,255,255,.72);letter-spacing:1px;font-weight:300}
+  @media(max-width:860px){.cities-panel{grid-template-columns:1fr}.city-ledger{columns:1}}
 
   section.block{padding:13vh 0}
   .sec-head{max-width:640px;margin-bottom:56px}
@@ -270,8 +281,28 @@
 <!-- 11 KOTA -->
 <section class="cities">
   <div class="wrap">
-    <div class="cities-num">11<small>Kota</small></div>
-    <p class="city-flow">Jakarta<i>·</i>Bogor<i>·</i>Depok<i>·</i>Tangerang<i>·</i>Bekasi<i>·</i>Cikarang<i>·</i>Karawang<i>·</i>Bandung<i>·</i>Surabaya<i>·</i>Bali<i>·</i>Medan</p>
+    <div class="cities-panel">
+      <svg class="cities-smile" viewBox="0 0 100 100" aria-hidden="true">
+        <path d="M 18 34 A 40 40 0 1 0 82 34" fill="none" stroke="#FFFFFF" stroke-width="11" stroke-linecap="round"/>
+      </svg>
+      <div>
+        <p class="eyebrow">Jangkauan <span class="dot">·</span> Layanan</p>
+        <p class="cities-big">Hadir di <em>11 kota</em>, tumbuh bersama keluarga Indonesia.</p>
+      </div>
+      <div class="city-ledger">
+        <div class="city-row">Jakarta <small>DKI Jakarta</small></div>
+        <div class="city-row">Bogor <small>Jawa Barat</small></div>
+        <div class="city-row">Depok <small>Jawa Barat</small></div>
+        <div class="city-row">Tangerang <small>Banten</small></div>
+        <div class="city-row">Bekasi <small>Jawa Barat</small></div>
+        <div class="city-row">Cikarang <small>Jawa Barat</small></div>
+        <div class="city-row">Karawang <small>Jawa Barat</small></div>
+        <div class="city-row">Bandung <small>Jawa Barat</small></div>
+        <div class="city-row">Surabaya <small>Jawa Timur</small></div>
+        <div class="city-row">Bali <small>Denpasar &amp; sekitarnya</small></div>
+        <div class="city-row">Medan <small>Sumatera Utara</small></div>
+      </div>
+    </div>
   </div>
 </section>
 
