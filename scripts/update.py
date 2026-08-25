@@ -36,6 +36,14 @@ n = js('document.querySelectorAll("div.jftiEf").length')
 if n == 0:
     goto_url("''' + PLACE_URL + r'''")
     wait_for_load(); time.sleep(7)
+# sortir "Terbaru"
+try:
+    js("""(() => { const b=[...document.querySelectorAll('button')].find(x=>/urutkan/i.test((x.getAttribute('aria-label')||'')+(x.textContent||''))); if(b) b.click(); return 1; })()""")
+    time.sleep(2.5)
+    js("""(() => { const i=[...document.querySelectorAll('div[role=\'menuitemradio\'], li[role=\'menuitemradio\']')].find(x=>/terbaru/i.test(x.textContent||'')); if(i) i.click(); return 1; })()""")
+    time.sleep(5)
+except Exception:
+    pass
 prev = 0
 for i in range(30):
     js("""(() => {
